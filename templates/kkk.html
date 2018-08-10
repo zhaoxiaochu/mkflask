@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for item in my_list if item.id !=5%}
+        {% if item.id==1 %}
+        <li style="background-color: orangered"> {{ item.value}}</li>
+         {% elif item.id==2 %}
+        <li style="background-color: red"> {{ item.value}}</li>
+         {% elif item.id==3 %}
+        <li style="background-color: black"> {{ item.value}}</li>
+         {% else %}
+        <li style="background-color: pink"> {{ item.value}}</li>
+        {% endif %}
+
+
+
+    {% endfor %}
+</ul>
+</body>
+</html>

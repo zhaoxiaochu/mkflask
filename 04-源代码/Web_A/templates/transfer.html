@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转账界面</title>
+</head>
+<body>
+<h1>我是 WebA 的转账页面</h1>
+
+<form method="post">
+    <input name="token" hidden value="{{ token }}">
+    <label>转给谁：</label><input name="to_account"><br>
+    <label>转多少：</label><input name="money"> <br>
+    <input type="submit" value="转账">
+</form>
+
+{% for message in get_flashed_messages() %}
+{{ message }}
+{% endfor %}
+
+</body>
+</html>

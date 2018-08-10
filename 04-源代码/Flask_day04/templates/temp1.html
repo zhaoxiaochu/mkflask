@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+可以在模板中取到当前应用的所有配置
+{{ config.DEBUG }} / {{ config["DEBUG"] }}
+<hr>
+
+请求上下文中的两个变量：<br>
+当前的 url 地址：{{ request.url }}<br>
+获取 session: {{ session["name"] }}
+
+<hr>
+应用上下文中的一个变量：<br>
+
+g变量取值：{{ g.user_name }}<br/>
+
+
+<hr>
+可以直接使用的两个函数：<br>
+url_for（生成指定函数名所对应的路由地址）： <a href="{{  url_for('index') }}">回到主页</a>
+<hr>
+get_flashed_messages函数：<br>
+{% for message in get_flashed_messages() %}
+    {{ message }}
+{% endfor %}
+
+
+</body>
+</html>
